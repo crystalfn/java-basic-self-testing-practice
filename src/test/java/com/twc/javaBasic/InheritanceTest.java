@@ -3,6 +3,7 @@ package com.twc.javaBasic;
 import com.twc.javaBasic.util.*;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,7 +15,7 @@ class InheritanceTest {
         //  Please write down the class type directly.
         //
         // <--start
-        final Class<?> expectedSuperClass = null;
+        final Class<?> expectedSuperClass = Object.class;
         // --end-->
 
         assertEquals(expectedSuperClass, SimpleEmptyClass.class.getSuperclass());
@@ -29,7 +30,7 @@ class InheritanceTest {
         // Hint: check https://beginnersbook.com/2013/03/constructors-in-java/
         //
         // <--start
-        final String[] expected = {};
+        final String[] expected = {"SuperClassWithDefaultConstructor.constructor()", "DerivedFromSuperClassWithDefaultConstructor.constructor()"};
         // --end-->
 
         String[] logs = instance.getLogs();
@@ -47,7 +48,7 @@ class InheritanceTest {
         //  You should write the answer directly.
         // Hint: https://beginnersbook.com/2014/01/method-overriding-in-java-with-example/
         // <--start
-        final String expectedName = "";
+        final String expectedName = "DerivedFromBaseClassForOverriding";
         // --end-->
 
         assertEquals(expectedName, instance.getName());
@@ -59,7 +60,7 @@ class InheritanceTest {
 
         // TODO: You should write the answer directly.
         // <--start
-        final String expectedName = "";
+        final String expectedName = "BaseClassForOverriding->DerivedFromBaseClassForOverridingCallingSuper";
         // --end-->
 
         assertEquals(expectedName, instance.getName());
